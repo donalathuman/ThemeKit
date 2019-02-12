@@ -4,4 +4,4 @@ development:
   store: chupisandbox.myshopify.com
   directory: D:\Dropbox\Projects\Chupi\Starter themes\ThemeKit
   ignore_files:
-    - settings_data.json
+  - config/settings_data.json
