@@ -1,0 +1,31 @@
+
+{% comment %}
+
+//-------- Notes --------
+
+Using a seperator to split up product description text.
+
+{% endcomment %}
+
+
+
+<h1>{{ product.title }}</h1>
+
+{% if product.description contains "**split-here**"  %}
+
+  {% assign descriptionSections = product.description | split: '**split-here**' %}
+
+  <h3>Description part 1</h3>
+  {{ descriptionSections[0] }}
+
+  <h3>Description part 2</h3>
+  {{ descriptionSections[1] }}
+
+  <h3>Description part 3</h3>
+  {{ descriptionSections[2] }}
+
+{% else %}
+
+  {{ product.description }}
+
+{% endif %}

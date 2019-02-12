@@ -1,0 +1,104 @@
+
+
+
+<section id="team-block">
+
+  <h2>{{ section.settings.heading }}</h2>
+
+  <div class="grid">
+
+    {% for block in section.blocks %}
+
+      <div class="grid-item">
+        <div class="team-member overlay-trigger">
+          <div class="team-details">
+            <h3>{{ block.settings.name }}</h3>
+            <p>{{ block.settings.position }}</p>
+          </div>
+          <div class="team-overlay"></div>
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.name }} - {{ block.settings.position }}">
+        </div>
+        <div class="team-member-popup-overlay">
+          <div class="team-member-popup-inner">
+            <h3>{{ block.settings.name }}</h3>
+            <p class="title">{{ block.settings.position }}</p>
+            {{ block.settings.bio }}
+            <span class="team-member-overlay-close"></span>
+          </div>
+        </div>
+      </div> <!-- end #grid-item -->
+
+    {% endfor %}
+
+  </div>
+ 
+</section> <!-- end #team-block -->
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Team Members",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Meet the Chupi Team"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Member",
+      "settings": [
+        {
+          "id": "name",
+          "type": "text",
+       		"label": "Name"
+        },
+        {
+          "id": "position",
+          "type": "text",
+          "label": "Position"
+        },
+        {
+          "id": "bio",
+          "type": "textarea",
+          "label": "Bio"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Member Blocks",
+      "category": "Team Member",
+      "blocks": [
+        {
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+
+{% endjavascript %}

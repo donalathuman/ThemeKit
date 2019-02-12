@@ -1,0 +1,121 @@
+
+
+  {% assign ribbon_display = section.settings.ribbon-display %}
+  {% assign ribbon_bg_image = section.settings.ribbon-background-image %}
+  {% assign ribbon_bg_colour = section.settings.ribbon-background-colour %}
+  {% if ribbon_display == true %}
+    <!-- Notification ribbon -->
+    {% if ribbon_bg_image  %}
+    <div id="notification-ribbon" class="aw18aa" style="background-image: url({{ section.settings.ribbon-background-image | img_url: 'master' }});">
+    {% elsif ribbon_bg_colour %}
+    <div id="notification-ribbon" class="aw18bb" style="background-color: {{ section.settings.ribbon-background-colour }};">
+    {% endif %}
+      <div class="container">
+        <span style="color: {{ section.settings.ribbon-text-colour }};">{{ section.settings.ribbon-text }}</span>
+        <a href="javascript:;" class="close-ribbon">
+          <span style="background-color: {{ section.settings.ribbon-text-colour }};"></span><span style="background-color: {{ section.settings.ribbon-text-colour }};"></span>
+        </a>
+      </div>
+    </div>
+  {% endif %}
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Notification Ribbon",
+    "settings": [
+      {
+        "id": "ribbon-display",
+        "type": "checkbox",
+        "default":   false,
+        "label": "Show notification ribbon"
+      },
+      {
+        "id": "ribbon-text",
+        "type": "richtext",
+        "label": "Ribbon text"
+      },
+      {
+        "id": "ribbon-background-image",
+        "type": "image_picker",
+        "label": "Ribbon background Image",
+        "info": "If no image chosen, background colour will be used instead."
+      },
+      {
+        "id": "ribbon-background-colour",
+        "type": "color",
+        "default": "#3c3b39",
+        "label": "Ribbon background colour"
+      },
+      {
+        "id": "ribbon-text-colour",
+        "type": "color",
+        "default": "#c7af78",
+        "label": "Ribbon text colour"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+
+
+{% javascript %}
+
+  // Function to set cookie
+  function setCookie(name, value, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+  // Function to return the value of a named cookie
+  function getCookie(name) {
+      var name = name + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
+  }
+  function notificationRibbon(){
+    const ribbonElement = document.getElementById('notification-ribbon');
+    const closeRibbon = document.querySelector('a.close-ribbon');
+
+    let prevClosed = getCookie("notification-ribbon");
+    if (prevClosed !== "closed"){
+      document.body.classList.add('notification-ribbon-push');
+      ribbonElement.classList.add('active');
+
+      // Close on click
+      closeRibbon.addEventListener('click', function(){
+        document.body.classList.remove('notification-ribbon-push');
+        ribbonElement.classList.remove('active');
+        setCookie("notification-ribbon", "closed", 7);
+      });
+    }
+    else {
+      //console.log('notification ribbon has been closed');
+    }
+  }
+  notificationRibbon();
+
+{% endjavascript %}

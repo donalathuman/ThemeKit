@@ -1,0 +1,144 @@
+
+
+
+<section id="home-story">
+
+  <div class="grid">
+
+    <!-- Story 1 -->
+    <div class="grid-item">
+      <img class="home-story-image image-cover"
+      srcset="{{ section.settings.story-1-image | img_url: 'master' | replace: '.jpg', '_400x400.jpg' }} 400w,
+             {{ section.settings.story-1-image | img_url: 'master' | replace: '.jpg', '_600x600.jpg' }} 600w,
+             {{ section.settings.story-1-image | img_url: 'master' | replace: '.jpg', '_800x800.jpg' }} 800w"
+      sizes="(max-width: 450px) 400px,
+            (max-width: 767px) 600px,
+            (min-width: 768px) 800px"
+      src="{{ section.settings.story-1-image | img_url: 'master' }}">
+    </div>
+    <div class="grid-item">
+      <h3>{{ section.settings.story-1-heading }}</h3>
+      {{ section.settings.story-1-text }}
+    </div>
+
+    <!-- Story 2 -->
+    <div class="grid-item">
+      <img class="home-story-image image-cover"
+      srcset="{{ section.settings.story-2-image | img_url: 'master' | replace: '.jpg', '_400x400.jpg' }} 400w,
+             {{ section.settings.story-2-image | img_url: 'master' | replace: '.jpg', '_600x600.jpg' }} 600w,
+             {{ section.settings.story-2-image | img_url: 'master' | replace: '.jpg', '_800x800.jpg' }} 800w"
+      sizes="(max-width: 450px) 400px,
+            (max-width: 767px) 600px,
+            (min-width: 768px) 800px"
+      src="{{ section.settings.story-1-image | img_url: 'master' }}">
+    </div>
+    <div class="grid-item">
+      <h3>{{ section.settings.story-2-heading }}</h3>
+      {{ section.settings.story-2-text }}
+    </div>
+
+    <!-- Story bottom -->
+    <div class="grid-item story-bottom">
+      <!-- <div class="image-cover" data-lazy-mobile-src="{{ section.settings.story-3-background-image | img_url: 'master' }}" data-lazy-src="{{ section.settings.story-3-background-image | img_url: 'master' }}" style="background-image: url({{ section.settings.story-3-background-image | img_url: 'master' }});"></div> -->
+      <img class="image-cover"
+      srcset="{{ section.settings.story-3-background-image | img_url: 'master' | replace: '.jpg', '_450x450.jpg' }} 450w,
+             {{ section.settings.story-3-background-image | img_url: 'master' | replace: '.jpg', '_800x800.jpg' }} 800w,
+             {{ section.settings.story-3-background-image | img_url: 'master' | replace: '.jpg', '_1920x1920.jpg' }} 1920w"
+      sizes="(max-width: 450px) 450px,
+            (max-width: 767px) 800px,
+            (min-width: 768px) 1920px"
+      src="{{ section.settings.story-1-image | img_url: 'master' }}">
+
+      <div class="content text-{{ section.settings.story-3-contrast }}">
+        <h3>{{ section.settings.story-3-heading }}</h3>
+        <p>{{ section.settings.story-3-text }}</p>
+        <a href="{{ section.settings.button-story-3-button-link }}" class="btn btn-lg btn-{{ section.settings.story-3-contrast }}">{{ section.settings.story-3-button-label }}</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Home Story",
+    "settings": [
+      {
+        "id": "story-1-heading",
+        "type": "text",
+        "label": "Story 1 heading"
+      },
+      {
+        "id": "story-1-text",
+        "type": "textarea",
+        "label": "Story 1 text"
+      },
+      {
+        "id": "story-1-image",
+        "type": "image_picker",
+        "label": "Story 1 image"
+      },
+      {
+        "id": "story-2-heading",
+        "type": "text",
+        "label": "Story 2 heading"
+      },
+      {
+        "id": "story-2-text",
+        "type": "textarea",
+        "label": "Story 2 text"
+      },
+      {
+        "id": "story-2-image",
+        "type": "image_picker",
+        "label": "Story 2 image"
+      },
+      {
+        "id": "story-3-heading",
+        "type": "text",
+        "label": "Story 3 heading"
+      },
+      {
+        "id": "story-3-text",
+        "type": "textarea",
+        "label": "Story 3 text"
+      },
+      {
+        "id": "story-3-button-link",
+        "type": "url",
+        "label": "Story 3 button link"
+      },
+      {
+        "id": "story-3-button-label",
+        "type": "text",
+        "label": "Story 3 button label"
+      },
+      {
+        "id": "story-3-contrast",
+         "type": "radio",
+         "label": "Story 3 contrast",
+         "options": [
+           { "value": "dark", "label": "Dark" },
+           { "value": "light", "label": "Light" }
+         ],
+         "default":   "light"
+      },
+      {
+        "id": "story-3-background-image",
+        "type": "image_picker",
+        "label": "Story 3 background image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,62 @@
+
+{% comment %}
+This menu relies on a 3-tier structure in Shopify's back-end, where second tier items have a blank link (#) and act as titles for thier child lists
+{% endcomment %}
+
+{% comment %} Define Shopify menus {% endcomment %}
+{% assign main_menu = linklists.main-menu %}
+
+
+{% comment %} If menu has top level items {% endcomment %}
+{% if main_menu.levels > 0 %}
+  <!-- Main nav -->
+  <nav>
+      <ul>
+        {% for link in main_menu.links %}
+          {% assign child_list_handle = link.title | handleize %}
+          {% if linklists[child_list_handle].links != blank %}
+            <li> <!-- Top level link -->
+              <a href="{{ link.url }}">{{ link.title }}</a>
+              {% if link.links != blank %}
+                  <ul class="dropdown">
+                    {% for child_link in link.links %}
+                      <!-- If second level item has blank link (#), make a h3 title for it's child list -->
+                      {% if child_link.url == '#' %}
+                        <div class="inner-list">
+                          <h3>{{ child_link.title }}</h3>
+                          {% if child_link.links != blank %}
+                            <ul class="dropdown">
+                              {% for grandchild_link in child_link.links %}
+                              <li> <!-- Third level link -->
+                                <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </div>
+                      <!-- Else create normal inner list -->
+                      {% else %}
+                        <li>
+                          <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                          {% if child_link.links != blank %}
+                            <ul class="dropdown">
+                              {% for grandchild_link in child_link.links %}
+                              <li> <!-- Third level link -->
+                                <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+              {% endif %}
+            </li>
+          {% else %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+{% endif %}

@@ -1,0 +1,47 @@
+
+
+
+<footer>
+
+  <div class="top">
+
+    {% assign footer_jewellery_menu = linklists.footer-jewellery %}
+    {% if footer_jewellery_menu.levels > 0 %}
+      <nav>
+        <ul>
+          {% for link in footer_jewellery_menu.links %}
+            {% if link.url == '#' %}
+            <h3>{{ link.title }}</h3>
+            {% else %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+
+    {% assign footer_about_menu = linklists.footer-about %}
+    {% if footer_about_menu.levels > 0 %}
+      <nav>
+        <ul>
+          {% for link in footer_about_menu.links %}
+            {% if link.url == '#' %}
+            <h3>{{ link.title }}</h3>
+            {% else %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+  </div>
+
+  <div class="bottom">
+
+    {% section 'footer-bottom' %}
+
+  </div>
+
+</footer>

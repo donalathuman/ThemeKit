@@ -1,0 +1,55 @@
+// main: ../_variables.scss
+
+
+
+// testing
+// $custom-text-default: var(--color-text-default);
+// $custom-text-highlight: var(--color-text-highlight);
+
+
+// Monochrome colours
+$white:                 #ffffff;
+$grey-lightest:         #FAFAFA;
+$grey-lighter:          #F3F3F3;
+$grey-light:            #CCCCCC;
+$grey-middle:           #8F8F8F;
+$grey-dark:             #333333;
+$black:                 #000000;
+
+$gold:                  #c7af78;
+
+// Primary colours
+$primary-navy:          #15345C;
+$primary-blue:          #3385C6;
+$primary-orange:        #F16522;
+$primary-green:         #009148;
+$primary-yellow:        #FFCC02;
+
+
+// Secondary colours
+$secondary-purple:      #8759FE;
+$secondary-aqua:        #02BBCC;
+$secondary-orange:      #FF9F00;
+$secondary-mint:        #00DEAF;
+$secondary-yellow:      #DAAA00;
+
+// Faint colours
+$faint-blue:            #edf2f6;
+
+// Text colours
+$text-black:            $grey-dark;
+$text-grey:             $grey-middle;
+$text-white:            $white;
+$text-orange:           $primary-orange;
+$text-navy:             $primary-navy;
+$text-blue:             $primary-blue;
+$text-placeholder:      $grey-middle;
+
+// Hover tones
+$primary-orange-hover:  #f58c59;
+$primary-blue-hover:    #66a4d4;
+$primary-green-hover:   #20a260;
+
+
+// Button colours
+$button-default-colour:       var(--color-button-default);

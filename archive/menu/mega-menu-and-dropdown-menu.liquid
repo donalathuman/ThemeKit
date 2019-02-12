@@ -1,0 +1,96 @@
+
+{% comment %}
+
+//-------- Notes --------
+
+This snippet uses Shopify's built-in menu system, together with specific link tags to define an inner mega-menu or dropdown menu.
+
+How it works:
+- It lists all 1st tier menu items as menu links.
+- If a 1st tier menu item has a link '#has-menu-item', it creates an inner <ul> with a 'mega-menu' class.
+- A mega-menu will check for 2nd tier items that have a link of '#', which will become titles for their 3rd tier inner menus.
+- If a 1st tier menu item has a link '#has-dropdown', it creates an inner <ul> with a 'dropdown' class.
+- A dropdown menu will display a standard single list of 2nd tier menu items.
+
+{% endcomment %}
+
+
+{% assign main_menu = linklists.main-menu %}
+
+
+{% comment %} If menu has top level items {% endcomment %}
+{% if main_menu.levels > 0 %}
+  <!-- Main nav -->
+  <nav>
+    <ul>
+      {% for link in main_menu.links %}
+        {% assign child_list_handle = link.title | handleize %}
+        {% if linklists[child_list_handle].links != blank %}
+          <li>
+            {% if link.url == '#has-mega-menu' %}
+
+              <!-- Mega menu -->
+              <a href="javascript:;">{{ link.title }}</a>
+              {% if link.links != blank %}
+                <ul class="mega-menu">
+                  {% for child_link in link.links %}
+                    <!-- If second level item has blank link (#), make a h3 title for it's child list -->
+                    {% if child_link.url == '#' %}
+                      <div class="inner-list">
+                        <h3>{{ child_link.title }}</h3>
+                        {% if child_link.links != blank %}
+                          <ul class="dropdown">
+                            {% for grandchild_link in child_link.links %}
+                            <li> <!-- Third level link -->
+                              <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </div>
+                    <!-- Else create normal inner list -->
+                    {% else %}
+                      <li>
+                        <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        {% if child_link.links != blank %}
+                          <ul class="dropdown">
+                            {% for grandchild_link in child_link.links %}
+                            <li> <!-- Third level link -->
+                              <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            {% elsif link.url == '#has-dropdown' %}
+
+              <!-- Dropdown menu -->
+              <a href="javascript:;">{{ link.title }}</a>
+              {% if link.links != blank %}
+                <ul class="dropdown">
+                  {% for child_link in link.links %}
+                    <li> <!-- Third level link -->
+                      <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            {% else %}
+
+
+
+            {% endif %}
+          </li>
+        {% else %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

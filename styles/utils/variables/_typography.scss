@@ -1,0 +1,99 @@
+// main: ../_variables.scss
+
+
+// Font family (Typekit)
+// $font-family-primary: sans-serif; // Headings, primary nav
+// $font-family-secondary: sans-serif; // Everything else
+
+$font-family-primary: 'Josefin Sans', sans-serif;
+$font-family-secondary: 'Josefin Sans', sans-serif;
+
+
+
+// Font size - h1-h6 media-query maps (max-width:font-size)
+$h1-size: (             null  : 60px,
+                        1400px : 60px,
+                        991px : 60px,
+                        767px : 48px,
+                        450px : 36px
+);
+$h1-lg-size: (          null  : 80px,
+                        1400px : 80px,
+                        1199px : 80px,
+                        991px : 80px,
+                        767px : 64px,
+                        450px : 36px
+);
+$h2-size: (             null  : 36px,
+                        991px : 36px,
+                        767px : 36px,
+                        450px : 28px
+);
+$h3-size: (             null  : 28px,
+                        991px : 24px,
+                        767px : 24px,
+                        450px : 24px
+);
+$h4-size: (             null  : 24px,
+                        991px : 22px,
+                        767px : 20px,
+                        450px : 20px
+);
+$h5-size: (             null  : 18px,
+                        991px : 18px,
+                        767px : 16px,
+                        450px : 16px
+);
+$h6-size: (             null  : 18px,
+                        991px : 18px,
+                        767px : 16px,
+                        450px : 16px
+);
+
+
+
+
+// Font size (other) media-query maps (max-width:font-size)
+$p-text-size: (             null  : 16px,
+                            991px : 16px,
+                            767px : 16px,
+                            450px : 14px
+);
+$p-standout-text-size: (    null  : 28px,
+                            991px : 24px,
+                            767px : 22px,
+                            450px : 22px
+);
+$p-banner-text-size: (      null  : 24px,
+                            991px : 24px,
+                            767px : 24px,
+                            450px : 20px
+);
+// Buttons
+$button-text-size: (        null  : 24px,
+                            991px : 24px,
+                            767px : 20px,
+                            450px : 18px
+);
+$button-lg-text-size: (     null  : 28px,
+                            1400px : 28px,
+                            991px : 28px,
+                            767px : 24px,
+                            450px : 20px
+);
+$button-sm-text-size: (     null  : 16px,
+                            1400px : 16px,
+                            991px : 16px,
+                            767px : 14px,
+                            450px : 14px
+);
+
+
+
+
+
+// Font weight
+$font-weight-light:         300;
+$font-weight-regular:       400;
+$font-weight-semibold:      600;
+$font-weight-bold:          700;

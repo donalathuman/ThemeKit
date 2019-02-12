@@ -1,0 +1,7 @@
+development:
+  password: 8941751a440f2218cc7a37a1d4ecdeeb
+  theme_id: "44698894395"
+  store: chupisandbox.myshopify.com
+  directory: D:\Dropbox\Projects\Chupi\Starter themes\ThemeKit
+  ignore_files:
+    - settings_data.json

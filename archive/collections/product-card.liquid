@@ -1,0 +1,19 @@
+
+{% comment %}
+
+Product snippet showing ID, link, price, and featured image
+This would be located in Snippets in a Shopify theme
+
+{% endcomment %}
+
+
+
+<div class="product-card">
+  <span>Product ID: {{ product.id }}</span>
+  <a href="{{ product.url }}">{{ product.title }}</a>
+  {{ product.price | money }}
+  {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+  <a href="{{ product.url }}">
+    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+  </a>
+</div>

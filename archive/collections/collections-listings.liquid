@@ -1,0 +1,39 @@
+
+{% comment %}
+
+-------- Notes --------
+
+No spaces between capture tags.
+Capture is faster than assign, Ref: https://github.com/Shopify/liquid/issues/487
+
+{% endcomment %}
+
+
+
+
+{% comment %} List all collections as links {% endcomment %}
+{% for collection in collections %}
+    {{ collection.title | link_to: collection.url }}
+{% endfor %}
+
+
+{% comment %} List 'Rings' collection and 'Necklaces' collection as links {% endcomment %}
+{% capture ringsCollectionHandle %}{{ collections.rings.handle }}{% endcapture %}
+{% capture necklacesCollectionHandle %}{{ collections.necklaces.handle }}{% endcapture %}
+
+{% for collection in collections %}
+  {% if collection.handle == ringsCollectionHandle or collection.handle == necklacesCollectionHandle  %}
+    {{ collection.title | link_to: collection.url }}
+  {% endif %}
+{% endfor %}
+
+
+{% comment %} List all collections as links, excluding 'Rings' collection and 'Necklaces' collection {% endcomment %}
+{% capture ringsCollectionHandle %}{{ collections.rings.handle }}{% endcapture %}
+{% capture necklacesCollectionHandle %}{{ collections.necklaces.handle }}{% endcapture %}
+
+{% for collection in collections %}
+  {% unless collection.handle == ringsCollectionHandle or collection.handle == necklacesCollectionHandle  %}
+    {{ collection.title | link_to: collection.url }}
+  {% endunless %}
+{% endfor %}

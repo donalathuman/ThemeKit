@@ -1,0 +1,41 @@
+
+{% comment %}
+This snippet loads in style settings from Shopify and assigns them as CSS variables
+This snippet is loaded in BEFORE CSS files in theme.liquid
+{% endcomment %}
+
+
+<style>
+
+  :root {
+
+    /*
+    For unit values (e.g. 'px'), include unit after setting value
+    e.g. --font-size-h1: {{ settings.font-size-h1 }}px;
+    */
+
+    /* Body */
+    --color-body-background: {{ settings.color-body-background }};
+    --color-text-default: {{ settings.color-text-default }};
+    --color-text-light: {{ settings.color-text-light }};
+    --color-text-highlight: {{ settings.color-text-highlight }};
+    /* Button colours */
+    --color-button-default: {{ settings.color-button-default }};
+    --color-button-light: {{ settings.color-button-light }};
+    --color-button-highlight: {{ settings.color-button-highlight }};
+    /* Nav */
+    --font-size-nav: {{ settings.font-size-nav }}px;
+    /* Headings */
+    --font-size-h1: {{ settings.font-size-h1 }}px;
+    --font-case-h1: {{ settings.font-case-h1 }};
+    --font-size-h2: {{ settings.font-size-h2 }}px;
+    --font-case-h2: {{ settings.font-case-h2 }};
+    --font-size-h3: {{ settings.font-size-h3 }}px;
+    --font-case-h3: {{ settings.font-case-h3 }};
+    /* Paragraphs */
+    --font-size-paragraph: {{ settings.font-size-paragraph }}px;
+    --line-height-paragraph: {{ settings.line-height-paragraph }}%;
+
+  }
+
+</style>

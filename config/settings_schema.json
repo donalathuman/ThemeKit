@@ -1,0 +1,188 @@
+[
+  
+  {
+    "name": "theme_info",
+    "theme_name": "Themekit template theme",
+    "theme_version": "1.0.0",
+    "theme_author": "Shopify",
+    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
+  },
+
+  {
+    "name": "Colours",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Body"
+      },
+      {
+        "type": "color",
+        "id": "color-body-background",
+        "label": "Background colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Text Colours"
+      },
+      {
+        "type": "color",
+        "id": "color-text-default",
+        "label": "Text default",
+        "default": "#3c3b39"
+      },
+      {
+        "type": "color",
+        "id": "color-text-light",
+        "label": "Text light",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color-text-highlight",
+        "label": "Text highlight",
+        "default": "#c7af78"
+      },
+      {
+        "type": "header",
+        "content": "Button Colours"
+      },
+      {
+        "type": "color",
+        "id": "color-button-default",
+        "label": "Button default",
+        "default": "#3c3b39"
+      },
+      {
+        "type": "color",
+        "id": "color-button-light",
+        "label": "Button light",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color-button-highlight",
+        "label": "Button highlight",
+        "default": "#c7af78"
+      }
+    ]
+  },
+
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header navigation"
+      },
+      {
+        "type": "range",
+        "id": "font-size-nav",
+        "min": 14,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size (desktop)",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Heading 1"
+      },
+      {
+        "type": "range",
+        "id": "font-size-h1",
+        "min": 48,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "label": "Font size (desktop)",
+        "default": 60
+      },
+      {
+       "type": "radio",
+       "id": "font-case-h1",
+       "options": [
+          { "value": "none", "label": "Normal case"},
+          { "value": "uppercase", "label": "Uppercase"}
+       ],
+       "label": "Font case",
+       "default": "none"
+     },
+     {
+        "type": "header",
+        "content": "Heading 2"
+      },
+      {
+        "type": "range",
+        "id": "font-size-h2",
+        "min": 24,
+        "max": 48,
+        "step": 2,
+        "unit": "px",
+        "label": "Font size (desktop)",
+        "default": 32
+      },
+      {
+       "type": "radio",
+       "id": "font-case-h2",
+       "options": [
+          { "value": "none", "label": "Normal case"},
+          { "value": "uppercase", "label": "Uppercase"}
+       ],
+       "label": "Font case",
+       "default": "none"
+      },
+      {
+        "type": "header",
+        "content": "Heading 3"
+      },
+      {
+        "type": "range",
+        "id": "font-size-h3",
+        "min": 18,
+        "max": 36,
+        "step": 2,
+        "unit": "px",
+        "label": "Font size (desktop)",
+        "default": 24
+      },
+      {
+       "type": "radio",
+       "id": "font-case-h3",
+       "options": [
+          { "value": "none", "label": "Normal case"},
+          { "value": "uppercase", "label": "Uppercase"}
+       ],
+       "label": "Font case",
+       "default": "none"
+      },
+      {
+        "type": "header",
+        "content": "Paragraph"
+      },
+      {
+        "type": "range",
+        "id": "font-size-paragraph",
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "line-height-paragraph",
+        "min": 100,
+        "max": 200,
+        "step": 2,
+        "unit": "%",
+        "label": "Line height",
+        "default": 130
+      }
+    ]
+  }
+
+]

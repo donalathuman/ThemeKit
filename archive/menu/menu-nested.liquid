@@ -1,0 +1,32 @@
+
+{% comment %} Ref: https://help.shopify.com/en/themes/liquid/objects/linklist {% endcomment %}
+
+{% comment %} Define Shopify menus {% endcomment %}
+{% assign main_menu = linklists.main-menu %}
+
+
+{% comment %} If menu has top level items {% endcomment %}
+{% if main_menu.levels > 0 %}
+  <!-- Main nav -->
+  <nav>
+    <ul>
+      {% for link in main_menu.links %}
+        {% assign child_list_handle = link.title | handleize %}
+        {% if linklists[child_list_handle].links != blank %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% if link.links != blank %}
+              <ul class="dropdown">
+                {% for child_link in link.links %}
+                <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% else %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

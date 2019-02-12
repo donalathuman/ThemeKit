@@ -1,0 +1,65 @@
+
+{% comment %}
+
+//-------- Notes --------
+
+No spaces between capture tags.
+Capture is faster than assign, Ref: https://github.com/Shopify/liquid/issues/487
+
+{% endcomment %}
+
+
+
+
+
+{% comment %} List all products in store {% endcomment %}
+{% for product in collections.all.products %}
+  {% include "product-card" %}
+{% endfor %}
+
+
+{% comment %} List first 10 products in store {% endcomment %}
+{% for product in collections.all.products limit:10 %}
+  {% include "product-card" %}
+{% endfor %}
+
+
+{% comment %} List first 10 products in 'Rings' collection {% endcomment %}
+{% for product in collections.rings.products limit:10 %}
+  {% include "product-card" %}
+{% endfor %}
+
+
+{% comment %} List 10 products in each of 'Rings' collection and 'Necklaces' collection {% endcomment %}
+{% capture ringsCollectionHandle %}{{ collections.rings.handle }}{% endcapture %}
+{% capture necklacesCollectionHandle %}{{ collections.necklaces.handle }}{% endcapture %}
+{% assign collectionHandles = 'rings,necklaces' | split:',' %}
+
+{% for customCollections in collectionHandles %}
+  {% assign customCollection = collections[customCollections] %}
+  {% for product in customCollection.products limit:10 %}
+    {% include "product-card" %}
+  {% endfor %}
+{% endfor %}
+
+
+{% comment %} List 10 products in current collection (collection.liquid) {% endcomment %}
+{% for product in collection.products %}
+  {% include "product-card" %}
+{% endfor %}
+
+
+{% comment %} Paginate by 10 products for all products in store {% endcomment %}
+{% paginate collections.all.products by 10 %}
+
+  {% for product in collections.all.products %}
+    {% include "product-card" %}
+  {% else %}
+    <p>No matches</p>
+  {% endfor %}
+
+  {% if paginate.pages > 1 %}
+    <div class="pagination">{{ paginate | default_pagination }}</div>
+  {% endif %}
+
+{% endpaginate %}

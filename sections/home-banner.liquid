@@ -1,0 +1,78 @@
+
+
+<section id="home-banner">
+
+  <!-- <div class="image-cover" data-lazy-mobile-src="{{ section.settings.background-image | img_url: 'master' }}" data-lazy-src="{{ section.settings.background-image | img_url: 'master' }}" style="background-image: url({{ section.settings.background-image | img_url: 'master' }});"></div> -->
+
+  <img class="image-cover"
+    srcset="{{ section.settings.background-image | img_url: 'master' | replace: '.jpg', '_450x450.jpg' }} 450w,
+           {{ section.settings.background-image | img_url: 'master' | replace: '.jpg', '_800x800.jpg' }} 800w,
+           {{ section.settings.background-image | img_url: 'master' | replace: '.jpg', '_1920x1920.jpg' }} 1920w"
+    sizes="(max-width: 450px) 450px,
+          (max-width: 767px) 800px,
+          (min-width: 768px) 1920px"
+    src="{{ section.settings.background-image | img_url: 'master' }}">
+
+
+  <div class="content align-{{ section.settings.content-align }} text-{{ section.settings.content-contrast }}">
+    <h1>{{ section.settings.heading }}</h1>
+    <a href="{{ section.settings.button-link }}" class="btn btn-lg btn-{{ section.settings.content-contrast }}">{{ section.settings.button-label }}</a>
+  </div>
+
+</section> <!-- end #home-banner -->
+
+
+{% schema %}
+  {
+    "name": "Home Banner",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "button-link",
+        "type": "url",
+        "label": "Button link"
+      },
+      {
+        "id": "button-label",
+        "type": "text",
+        "label": "Button label"
+      },
+      {
+        "id":        "content-align",
+         "type":      "radio",
+         "label":     "Align content",
+         "options": [
+           { "value": "left", "label": "Left" },
+           { "value": "center", "label": "Centre" },
+           { "value": "right", "label": "Right" }
+         ],
+         "default":   "left"
+      },
+      {
+        "id":        "content-contrast",
+         "type":      "radio",
+         "label":     "Content contrast",
+         "options": [
+           { "value": "dark", "label": "Dark" },
+           { "value": "light", "label": "Light" }
+         ],
+         "default":   "dark"
+      },
+      {
+        "id": "background-image",
+        "type": "image_picker",
+        "label": "Background image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,57 @@
+
+
+
+
+  <!-- Header top -->
+  <div class="header-top">
+    <div class="inner">
+      <!-- Delivery text -->
+      {{ section.settings.deliveries-link | replace: '<p>', '' | replace: '</p>', '' | replace: '<a', '<a class="delivery"' }}
+      <!-- Logo -->
+      <a class="header-logo" href="/"><img src="{{ section.settings.logo | img_url: '160x160' }}" alt="{{ section.settings.logo.alt }}" /></a>
+      <!-- Corner icons -->
+      <div class="corner-icons">
+        {% if customer %}
+        <a class="signed-in" href="/account">Welcome back {{customer.first_name}}</a>
+        {% else %}
+        <a class="sign-in" href="/account/login">Sign in</a>
+        {% endif %}
+        {% assign cart_count = cart.item_count %}
+        <a class="cart cart-count inline-cart-btn" href="/cart">Cart: {{ cart_count }}</a> <!-- use class "inline-cart-btn" to trigger inline-cart -->
+      </div> <!-- end corner-icons -->
+
+    </div> <!-- end inner -->
+  </div> <!-- end header-top -->
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Header Top",
+    "class": "header-top-section",
+    "settings": [
+      {
+        "id": "deliveries-link",
+        "type": "richtext",
+        "label": "Deliveries link",
+        "info": "Link in the top-left corner of the header."
+      },
+      {
+        "id": "logo",
+        "type": "image_picker",
+        "label": "Main Logo",
+        "info": "Choose image for main header logo."
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

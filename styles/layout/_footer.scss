@@ -1,0 +1,110 @@
+// main: ../styles.scss
+
+
+footer {
+  padding: 30px 15px;
+  .top {
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px 20px;
+    nav {
+      ul {
+        list-style-type: none;
+        h3 {
+          font-size: 16px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        li {
+          display: block;
+          a {
+            text-decoration: none;
+            padding: 7px 0;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+
+
+} /* end max-width 1400px */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+
+
+} /* end max-width 1199px */
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+
+
+} /* end max-width 991px */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+
+} /* end max-width 767px */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+
+} /* end max-width 450px */

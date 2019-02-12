@@ -1,0 +1,112 @@
+
+<header>
+
+
+
+  {% section 'notification-ribbon' %}
+
+  {% section 'header-top' %}
+
+
+  <div class="header-bottom">
+    <div class="inner">
+
+      {% comment %} Define Shopify menus {% endcomment %}
+      {% assign main_menu = linklists.main-menu %}
+      {% assign footer_menu = linklists.footer %}
+
+
+      {% comment %} If menu has top level items {% endcomment %}
+      {% if main_menu.levels > 0 %}
+        <!-- Main nav -->
+        <nav>
+          <ul>
+            {% for link in main_menu.links %}
+              {% assign child_list_handle = link.title | handleize %}
+              {% if linklists[child_list_handle].links != blank %}
+                <li>
+                  {% if link.url contains '.jpg' or link.url contains '.png'  %}
+
+                    <!-- Mega menu -->
+                    <a href="javscript:;">{{ link.title }}</a>
+                    {% if link.links != blank %}
+                      <ul class="mega-menu">
+                        {% for child_link in link.links %}
+                          <!-- If second level item has blank link (#), make a h3 title for it's child list -->
+                          {% if child_link.url == '#' %}
+                            <div class="inner-list">
+                              <h3>{{ child_link.title }}</h3>
+                              {% if child_link.links != blank %}
+                                <ul class="">
+                                  {% for grandchild_link in child_link.links %}
+                                  <li> <!-- Third level link -->
+                                    <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                  </li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
+                            </div>
+                          <!-- Else create normal inner list -->
+                          {% else %}
+                            <li>
+                              <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                              {% if child_link.links != blank %}
+                                <ul class="">
+                                  {% for grandchild_link in child_link.links %}
+                                  <li> <!-- Third level link -->
+                                    <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                  </li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                        {% endfor %}
+                        <img src="{{ link.url }}" />
+                      </ul>
+                    {% endif %}
+
+                  {% elsif link.url == '#has-dropdown' %}
+
+                    <!-- Dropdown menu -->
+                    <a href="javascript:;">{{ link.title }}</a>
+                    {% if link.links != blank %}
+                      <ul class="dropdown">
+                        {% for child_link in link.links %}
+                          <li> <!-- Third level link -->
+                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                  {% else %}
+
+
+
+                  {% endif %}
+                </li>
+              {% else %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+
+
+      <!-- Search -->
+      <form action="/search">
+        <input placeholder="SEARCH" type="search" value="" name="q" id="search-input-field" class="ais-search-box--input __web-inspector-hide-shortcut__">
+        <input type="input" disabled src="{{ 'search-icon.png' | asset_url }}" class="form-submit" id="search-button">
+      </form>
+
+    </div> <!-- end .inner -->
+  </div> <!-- end .header-bottom -->
+
+
+
+  {% include 'inline-cart' %}
+
+
+</header>

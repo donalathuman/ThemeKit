@@ -1,0 +1,119 @@
+// main: ../styles.scss
+
+.collection {
+  h1 {
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center; margin: 30px 15px;
+  }
+  .collection-list {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 40px 20px;
+      grid-auto-flow: row dense;
+      max-width: none;
+      padding-bottom: 96px;
+      li {
+        list-style: none;
+        display: inline-block;
+        float: left;
+        width: 100%;
+        line-height: 28px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+
+
+} /* end max-width 1400px */
+
+
+
+
+
+
+
+
+
+
+// Mobile menu
+@media screen and (max-width: 1199px) {
+
+
+
+} /* end max-width 1199px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+
+
+
+} /* end max-width 991px */
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+
+} /* end max-width 767px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+
+} /* end max-width 450px */

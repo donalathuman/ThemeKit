@@ -1,0 +1,117 @@
+
+
+
+
+
+
+
+<section id="home-collections">
+
+  <div class="grid">
+
+    {% for block in section.blocks %}
+
+      <div class="grid-item">
+        <!-- <div class="image-cover" data-lazy-mobile-src="{{ block.settings.background-image | img_url: 'master' }}" data-lazy-src="{{ block.settings.background-image | img_url: 'master' }}" style="background-image: url({{ block.settings.background-image | img_url: 'master' }});"></div> -->
+        <img class="home-story-image image-cover"
+        srcset="{{ block.settings.background-image | img_url: 'master' | replace: '.jpg', '_450x450.jpg' }} 450w,
+               {{ block.settings.background-image | img_url: 'master' | replace: '.jpg', '_800x800.jpg' }} 800w,
+               {{ block.settings.background-image | img_url: 'master' | replace: '.jpg', '_1000x1000.jpg' }} 1000w"
+        sizes="(max-width: 450px) 450px,
+              (max-width: 767px) 800px,
+              (min-width: 768px) 1000px"
+        src="{{ block.settings.background-image | img_url: 'master' }}">
+
+
+        <div class="content align-{{ block.settings.content-align }} text-{{ block.settings.content-contrast }}">
+          <h2>{{ block.settings.heading }}</h2>
+          <a class="btn btn-ghost btn-{{ block.settings.content-contrast }}" href="{{ block.settings.button-link }}">{{ block.settings.button-label }}</a>
+        </div>
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section> <!-- end #home-collections -->
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Home - Collections",
+	"max_blocks": 3,
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Block",
+      "settings": [
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "button-link",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "id": "button-label",
+          "type": "text",
+          "label": "Button label"
+        },
+        {
+          "id":        "content-align",
+           "type":      "radio",
+           "label":     "Align content",
+           "options": [
+             { "value": "left", "label": "Left" },
+             { "value": "center", "label": "Centre" },
+             { "value": "right", "label": "Right" }
+           ],
+           "default":   "left"
+        },
+        {
+          "id":        "content-contrast",
+           "type":      "radio",
+           "label":     "Content contrast",
+           "options": [
+             { "value": "dark", "label": "Dark" },
+             { "value": "light", "label": "Light" }
+           ],
+           "default":   "dark"
+        },
+        {
+          "id": "background-image",
+          "type": "image_picker",
+          "label": "Background image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action Blocks",
+      "category": "CTA button",
+      "blocks": [
+        {
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

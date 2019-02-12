@@ -1,0 +1,63 @@
+
+
+
+<section id="special-mention">
+
+  <h2>{{ section.settings.heading }}</h2>
+
+  <div class="grid">
+
+    <div class="grid-item">
+      <img src="{{ section.settings.special-mention-image | img_url: 'master' }}" alt="{{ section.settings.special-mention-name }}">
+    </div> <!-- end #grid-item -->
+
+    <div class="grid-item">
+      <h3>{{ section.settings.special-mention-name }}</h3>
+      {{ section.settings.special-mention-bio }}
+    </div> <!-- end #grid-item -->
+
+  </div>
+
+</section> <!-- end #special-mention -->
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Special Mention",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Special Mention"
+    },
+    {
+      "id": "special-mention-name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "id": "special-mention-bio",
+      "type": "textarea",
+      "label": "Bio"
+    },
+    {
+      "id": "special-mention-image",
+      "type": "image_picker",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+
+{% endjavascript %}

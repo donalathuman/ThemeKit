@@ -1,0 +1,407 @@
+
+{
+  "current": "Default",
+  "presets": {
+    "Default": {}
+  }
+}
+{
+  "current": {
+    "color-body-background": "#ffffff",
+    "color-text-default": "#3c3b39",
+    "color-text-light": "#ffffff",
+    "color-text-highlight": "#c7af78",
+    "color-button-default": "#3c3b39",
+    "color-button-light": "#ffffff",
+    "color-button-highlight": "#c7af78",
+    "font-size-nav": 16,
+    "font-size-h1": 50,
+    "font-case-h1": "uppercase",
+    "font-size-h2": 40,
+    "font-case-h2": "uppercase",
+    "font-size-h3": 28,
+    "font-case-h3": "none",
+    "font-size-paragraph": 18,
+    "line-height-paragraph": 130,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "font_size": 12,
+    "color_text_default": "#880000",
+    "sections": {
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "header-top": {
+        "type": "header-top",
+        "settings": {
+          "deliveries-link": "<p><a href=\"\/pages\/about\" title=\"About\">Free worldwide delivery and 100 days for returns<\/a><\/p>",
+          "logo": "shopify:\/\/shop_images\/logo.png"
+        }
+      },
+      "notification-ribbon": {
+        "type": "notification-ribbon",
+        "settings": {
+          "ribbon-display": true,
+          "ribbon-text": "<p>Valentine's Day Feb 14.&nbsp;<a href=\"\/collections\" title=\"All Collections\">Shop Now.<\/a><\/p>",
+          "ribbon-background-image": "",
+          "ribbon-background-colour": "#232323",
+          "ribbon-text-colour": "#c7af78"
+        }
+      },
+      "home-banner": {
+        "type": "home-banner",
+        "settings": {
+          "heading": "Tell your story",
+          "button-link": "shopify:\/\/collections\/rings",
+          "button-label": "Shop rings",
+          "content-align": "left",
+          "content-contrast": "dark",
+          "background-image": "shopify:\/\/shop_images\/Gift-to-you.jpg"
+        }
+      },
+      "home-collections": {
+        "type": "home-collections",
+        "blocks": {
+          "1548329248580": {
+            "type": "select",
+            "settings": {
+              "heading": "Block 1",
+              "button-link": "shopify:\/\/collections\/solid-gold-rings",
+              "button-label": "Shop solid gold rings",
+              "content-align": "left",
+              "content-contrast": "dark",
+              "background-image": "shopify:\/\/shop_images\/Make-them-blush.jpg"
+            }
+          },
+          "1548329313171": {
+            "type": "select",
+            "settings": {
+              "heading": "Block 2",
+              "button-link": "shopify:\/\/collections\/solid-gold-earrings",
+              "button-label": "Shop now",
+              "content-align": "right",
+              "content-contrast": "dark",
+              "background-image": "shopify:\/\/shop_images\/For-your-Forever.jpg"
+            }
+          },
+          "1548329348145": {
+            "type": "select",
+            "settings": {
+              "heading": "Block 3",
+              "button-link": "shopify:\/\/collections\/bracelets",
+              "button-label": "Shop bracelets",
+              "content-align": "center",
+              "content-contrast": "light",
+              "background-image": "shopify:\/\/shop_images\/Solid-Gold-Favourites.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1548329248580",
+          "1548329313171",
+          "1548329348145"
+        ],
+        "settings": {
+        }
+      },
+      "home-story": {
+        "type": "home-story",
+        "settings": {
+          "story-1-heading": "Made with love",
+          "story-1-text": "Chupi fell in love with how jewellery marks precious moments and lasts a lifetime. Every piece we make is handmade in Ireland, from a master goldsmith to a skilled diamond setter we draw on Ireland’s craft heritage to create your future heirloom.",
+          "story-1-image": "shopify:\/\/shop_images\/Made-with-Love.jpg",
+          "story-2-heading": "Made in Ireland, loved everywhere",
+          "story-2-text": "Our sparkling jewellery is sold all over the world from London to Tokyo. We have shipped sparkly things to 63 countries and counting, we love seeing where in the world our jewellery will go next. Your piece will be lovingly packaged in our signature luxury box and bag, with one of our Roald Dahl gift cards included it really is the perfect gift.",
+          "story-2-image": "shopify:\/\/shop_images\/Made-in-Ireland_e17aea76-8ab7-467d-bbfc-3ee65a292b8e.jpg",
+          "story-3-heading": "Inspired by wild & natural things",
+          "story-3-text": "Ireland is the last place in the world that magic still exists, from the beautiful Wicklow hills where Chupi was brought up to the wild beaches of Kerry our collection is inspired by wild & natural things. We work with feathers, twigs and leaves paired with the sparkliest Grey Diamond to create a magical collection.",
+          "story-3-button-link": "shopify:\/\/pages\/about",
+          "story-3-button-label": "Read our story",
+          "story-3-contrast": "light",
+          "story-3-background-image": "shopify:\/\/shop_images\/wicklow.jpg"
+        }
+      },
+      "about-team-members": {
+        "type": "about-team-members",
+        "blocks": {
+          "1548349840286": {
+            "type": "select",
+            "settings": {
+              "name": "Chupi",
+              "position": "Managing Director",
+              "bio": "Company founder and designer of all our sparkly things, each piece starts with a crazy spark from Chupi. Her designs are inspired by the beauty of wild things and upbringing in the picturesque surroundings of the Wicklow countryside.",
+              "image": "shopify:\/\/shop_images\/Chupi-Headshot-Chupi.jpg"
+            }
+          },
+          "1548409148472": {
+            "type": "select",
+            "settings": {
+              "name": "Ann",
+              "position": "Financial Controller",
+              "bio": "Having come first in Ireland in her accountancy exams Ann likes to keep a very accurate eye on our financials. Adored by our office dogs Poppy & Rufus, Ann (who is an incredible baker) even makes homemade treats for the pair of pooches.",
+              "image": "shopify:\/\/shop_images\/Chupi-Headshots-2017-014.jpg"
+            }
+          },
+          "1548409201313": {
+            "type": "select",
+            "settings": {
+              "name": "Anna",
+              "position": "Production Manager",
+              "bio": "Our Anna is that rare mix, a creative person with an eye for numbers. Anna is in charge of managing our production process and ensuring that not only do we make beautiful things but we do it brilliantly.",
+              "image": "shopify:\/\/shop_images\/Chupi-Headshots-2017-016.jpg"
+            }
+          },
+          "1548415061878": {
+            "type": "select",
+            "settings": {
+              "name": "Tom",
+              "position": "Team Motivator",
+              "bio": "",
+              "image": "shopify:\/\/shop_images\/tom.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1548349840286",
+          "1548409148472",
+          "1548409201313",
+          "1548415061878"
+        ],
+        "settings": {
+          "heading": "Meet the Chupi Team"
+        }
+      },
+      "about-team-special": {
+        "type": "about-team-special",
+        "settings": {
+          "heading": "Special Mention",
+          "special-mention-name": "Poppy and Rufus",
+          "special-mention-bio": "Arriving to the Chupi studio from Dogs Aid, a wonderful animal rescue charity in Ireland, Poppy & Rufus have brightened up our days with their mischievous antics.\n\nWhen not rustling in the bin or trying to chew through the legs of our chairs, the dogs love to boldly climb on to the seat of whoever was foolish enough to stand up last, usually Graham! Poppy has us all wrapped around her little paw, she sits by the office radiator until her whimpers force us to lift her up onto her favourite perch.",
+          "special-mention-image": "shopify:\/\/shop_images\/poppy-and-rufus_94ce6f70-8228-436e-b54e-84ed9805ab9c.jpg"
+        }
+      },
+      "footer-bottom": {
+        "type": "footer-bottom",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color-body-background": "#ffffff",
+      "color-text-default": "#3c3b39",
+      "color-text-light": "#ffffff",
+      "color-text-highlight": "#c7af78",
+      "color-button-default": "#3c3b39",
+      "color-button-light": "#ffffff",
+      "color-button-highlight": "#c7af78",
+      "font-size-nav": 16,
+      "font-size-h1": 50,
+      "font-case-h1": "uppercase",
+      "font-size-h2": 40,
+      "font-case-h2": "uppercase",
+      "font-size-h3": 28,
+      "font-case-h3": "none",
+      "font-size-paragraph": 18,
+      "line-height-paragraph": 130,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "font_size": 12,
+      "color_text_default": "#880000",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "settings": {
+          }
+        },
+        "header-top": {
+          "type": "header-top",
+          "settings": {
+            "deliveries-link": "<p><a href=\"\/pages\/about\" title=\"About\">Free worldwide delivery and 100 days for returns<\/a><\/p>",
+            "logo": "shopify:\/\/shop_images\/logo.png"
+          }
+        },
+        "notification-ribbon": {
+          "type": "notification-ribbon",
+          "settings": {
+            "ribbon-display": true,
+            "ribbon-text": "<p>Valentine's Day Feb 14.&nbsp;<a href=\"\/collections\" title=\"All Collections\">Shop Now.<\/a><\/p>",
+            "ribbon-background-image": "",
+            "ribbon-background-colour": "#232323",
+            "ribbon-text-colour": "#c7af78"
+          }
+        },
+        "home-banner": {
+          "type": "home-banner",
+          "settings": {
+            "heading": "Tell your story",
+            "button-link": "shopify:\/\/collections\/rings",
+            "button-label": "Shop rings",
+            "content-align": "left",
+            "content-contrast": "dark",
+            "background-image": "shopify:\/\/shop_images\/Gift-to-you.jpg"
+          }
+        },
+        "home-collections": {
+          "type": "home-collections",
+          "blocks": {
+            "1548329248580": {
+              "type": "select",
+              "settings": {
+                "heading": "Block 1",
+                "button-link": "shopify:\/\/collections\/solid-gold-rings",
+                "button-label": "Shop solid gold rings",
+                "content-align": "left",
+                "content-contrast": "dark",
+                "background-image": "shopify:\/\/shop_images\/Make-them-blush.jpg"
+              }
+            },
+            "1548329313171": {
+              "type": "select",
+              "settings": {
+                "heading": "Block 2",
+                "button-link": "shopify:\/\/collections\/solid-gold-earrings",
+                "button-label": "Shop now",
+                "content-align": "right",
+                "content-contrast": "dark",
+                "background-image": "shopify:\/\/shop_images\/For-your-Forever.jpg"
+              }
+            },
+            "1548329348145": {
+              "type": "select",
+              "settings": {
+                "heading": "Block 3",
+                "button-link": "shopify:\/\/collections\/bracelets",
+                "button-label": "Shop bracelets",
+                "content-align": "center",
+                "content-contrast": "light",
+                "background-image": "shopify:\/\/shop_images\/Solid-Gold-Favourites.jpg"
+              }
+            }
+          },
+          "block_order": [
+            "1548329248580",
+            "1548329313171",
+            "1548329348145"
+          ],
+          "settings": {
+          }
+        },
+        "home-story": {
+          "type": "home-story",
+          "settings": {
+            "story-1-heading": "Made with love",
+            "story-1-text": "Chupi fell in love with how jewellery marks precious moments and lasts a lifetime. Every piece we make is handmade in Ireland, from a master goldsmith to a skilled diamond setter we draw on Ireland’s craft heritage to create your future heirloom.",
+            "story-1-image": "shopify:\/\/shop_images\/Made-with-Love.jpg",
+            "story-2-heading": "Made in Ireland, loved everywhere",
+            "story-2-text": "Our sparkling jewellery is sold all over the world from London to Tokyo. We have shipped sparkly things to 63 countries and counting, we love seeing where in the world our jewellery will go next. Your piece will be lovingly packaged in our signature luxury box and bag, with one of our Roald Dahl gift cards included it really is the perfect gift.",
+            "story-2-image": "shopify:\/\/shop_images\/Made-in-Ireland_e17aea76-8ab7-467d-bbfc-3ee65a292b8e.jpg",
+            "story-3-heading": "Inspired by wild & natural things",
+            "story-3-text": "Ireland is the last place in the world that magic still exists, from the beautiful Wicklow hills where Chupi was brought up to the wild beaches of Kerry our collection is inspired by wild & natural things. We work with feathers, twigs and leaves paired with the sparkliest Grey Diamond to create a magical collection.",
+            "story-3-button-link": "shopify:\/\/pages\/about",
+            "story-3-button-label": "Read our story",
+            "story-3-contrast": "light",
+            "story-3-background-image": "shopify:\/\/shop_images\/wicklow.jpg"
+          }
+        },
+        "about-team-members": {
+          "type": "about-team-members",
+          "blocks": {
+            "1548349840286": {
+              "type": "select",
+              "settings": {
+                "name": "Chupi",
+                "position": "Managing Director",
+                "bio": "Company founder and designer of all our sparkly things, each piece starts with a crazy spark from Chupi. Her designs are inspired by the beauty of wild things and upbringing in the picturesque surroundings of the Wicklow countryside.",
+                "image": "shopify:\/\/shop_images\/Chupi-Headshot-Chupi.jpg"
+              }
+            },
+            "1548409148472": {
+              "type": "select",
+              "settings": {
+                "name": "Ann",
+                "position": "Financial Controller",
+                "bio": "Having come first in Ireland in her accountancy exams Ann likes to keep a very accurate eye on our financials. Adored by our office dogs Poppy & Rufus, Ann (who is an incredible baker) even makes homemade treats for the pair of pooches.",
+                "image": "shopify:\/\/shop_images\/Chupi-Headshots-2017-014.jpg"
+              }
+            },
+            "1548409201313": {
+              "type": "select",
+              "settings": {
+                "name": "Anna",
+                "position": "Production Manager",
+                "bio": "Our Anna is that rare mix, a creative person with an eye for numbers. Anna is in charge of managing our production process and ensuring that not only do we make beautiful things but we do it brilliantly.",
+                "image": "shopify:\/\/shop_images\/Chupi-Headshots-2017-016.jpg"
+              }
+            },
+            "1548415061878": {
+              "type": "select",
+              "settings": {
+                "name": "Tom",
+                "position": "Team Motivator",
+                "bio": "",
+                "image": "shopify:\/\/shop_images\/tom.jpg"
+              }
+            }
+          },
+          "block_order": [
+            "1548349840286",
+            "1548409148472",
+            "1548409201313",
+            "1548415061878"
+          ],
+          "settings": {
+            "heading": "Meet the Chupi Team"
+          }
+        },
+        "about-team-special": {
+          "type": "about-team-special",
+          "settings": {
+            "heading": "Special Mention",
+            "special-mention-name": "Poppy and Rufus",
+            "special-mention-bio": "Arriving to the Chupi studio from Dogs Aid, a wonderful animal rescue charity in Ireland, Poppy & Rufus have brightened up our days with their mischievous antics.\n\nWhen not rustling in the bin or trying to chew through the legs of our chairs, the dogs love to boldly climb on to the seat of whoever was foolish enough to stand up last, usually Graham! Poppy has us all wrapped around her little paw, she sits by the office radiator until her whimpers force us to lift her up onto her favourite perch.",
+            "special-mention-image": "shopify:\/\/shop_images\/poppy-and-rufus_94ce6f70-8228-436e-b54e-84ed9805ab9c.jpg"
+          }
+        },
+        "footer-bottom": {
+          "type": "footer-bottom",
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="collection">
+
+  {% paginate collection.products by 16 %}
+    <h1>{{ collection.title }}</h1>
+    <div class="collection-list">
+      <ul>
+      {% for product in collection.products %}
+        <li>
+          <div class="collection-item" data-variant-id="{{product.variants[0].id}}">
+            <a href="{{ product.url | within: collection }}">
+              <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+            </a>
+            <h3>{{ product.title }}</h3>
+            <span class="price">
+              {{ product.price | money }}
+              {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+            </span>
+            <a href="#" class="btn btn-add-to-cart" data-variant-id="{{product.variants[0].id}}">Add to bag</a>
+          </div>
+        </li>
+      {% else %}
+        <p>no matches</p>
+      {% endfor %}
+      </ul>
+    </div>
+    {% if paginate.pages > 1 %}
+      {{ paginate | default_pagination }}
+    {% endif %}
+  {% endpaginate %}
+
+</div>

@@ -1,0 +1,114 @@
+// main: ../styles.scss
+
+// Collection items
+.collection-item {
+  text-align: center;
+  a {
+    img {
+
+    }
+  }
+  h3 {
+    display: inline-block;
+    max-width: 80%;
+    margin-left: 10%;
+    align-self: last baseline;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-height: 48px;
+    height: auto;
+  }
+  .price {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .btn.btn-add-to-cart {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+
+
+
+} /* end max-width 1400px */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+
+
+} /* end max-width 1199px */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+
+
+
+} /* end max-width 991px */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+
+} /* end max-width 767px */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+
+} /* end max-width 450px */

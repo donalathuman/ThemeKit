@@ -1,0 +1,153 @@
+// main: ../styles.scss
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-regular;
+  @include font-size($button-text-size);
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-white;
+  padding: 15px 30px;
+  border: 0;
+  background-color: $grey-dark;
+  background-color: $button-default-colour;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition(all 0.2s ease);
+  &:hover {
+    text-decoration: none;
+    //background-color: $primary-orange-hover;
+  }
+  &:visited, &:focus, &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.btn-light {
+  color: $text-black;
+  color: var(--color-button-default);
+  background-color: $white;
+  &:hover {
+    background-color: $grey-light;
+  }
+}
+.btn-dark {
+  background-color: $black;
+  background-color: $button-default-colour;
+  &:hover {
+    background-color: $grey-dark;
+    //background-color: lighten( $button-default-colour, 50% );
+  }
+}
+
+// Ghost buttons
+.btn-ghost {
+  background: transparent;
+  border-style: solid;
+  border-width: 2px;
+}
+.btn-ghost.btn-light {
+  color: $text-white;
+  border-color: $white;
+  &:hover {
+    color: $text-black;
+    color: var(--color-button-default);
+    background-color: $white;
+  }
+}
+.btn-ghost.btn-dark {
+  color: $black;
+  color: var(--color-button-default);
+  border-color: $black;
+  border-color: var(--color-button-default);
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+
+
+// Large buttons
+.btn-lg {
+  @include font-size($button-lg-text-size);
+  padding: 18px 30px;
+}
+// Small buttons
+.btn-sm {
+  @include font-size($button-sm-text-size);
+  padding: 13px 15px;
+}
+
+
+// Disabled button
+.btn-disabled {
+  opacity: 0.5;
+  cursor: auto;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+
+
+} /* end max-width 1400px */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+
+
+
+} /* end max-width 991px */
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+
+} /* end max-width 767px */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+
+
+} /* end max-width 450px */

@@ -1,0 +1,29 @@
+// compileCompressed: ../assets/$1.css
+
+
+
+// Utilities
+@import "utils/variables";
+@import "utils/mixins";
+
+// Base styles
+@import "base/reset";
+@import "base/global";
+
+// Component styles
+@import "components/buttons";
+@import "components/cards";
+@import "components/charts";
+@import "components/forms";
+@import "components/tables";
+@import "components/modals";
+
+// Layout styles
+@import "layout/header";
+@import "layout/footer";
+@import "layout/collection";
+@import "layout/inline-cart";
+@import "layout/custom-sections";
+
+// Animations
+@import "animations/animations";
