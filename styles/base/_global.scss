@@ -47,6 +47,7 @@ font-weight: $font-weight-bold;
 text-transform: var(--font-case-h1); // custom
 line-height: 1.1;
 margin-bottom: 30px;
+color: pink; // test
 }
 h2 {
 @include font-size($h2-size);
